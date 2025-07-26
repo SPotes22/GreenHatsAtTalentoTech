@@ -1,0 +1,37 @@
+texto,intent
+"Hola',' ¿cómo estás?",saludo
+No entiendo la factura,soporte_factura
+Tengo un problema con el router,problema_tecnico
+Gracias por la ayuda,despedida
+Eso no fue lo que pedí,fallback
+soy un genio,copiaste tu mejor esfuerzo
+"Hola, ¿cómo estás?",saludo
+Buenos días,saludo
+¿Hay alguien ahí?,saludo
+¿Qué tal?,saludo
+¡Hey!,saludo
+Buenas,saludo
+No entiendo la factura,soporte_factura
+¿Dónde veo mi factura?,soporte_factura
+Mi factura llegó mal,soporte_factura
+Necesito ayuda con la factura,soporte_factura
+Me cobraron de más,soporte_factura
+No coincide el valor de la factura,soporte_factura
+Tengo un problema con el router,problema_tecnico
+No tengo internet,problema_tecnico
+Mi conexión está lenta,problema_tecnico
+No prende el módem,problema_tecnico
+La señal se cae,problema_tecnico
+Error 404 en mi navegador,problema_tecnico
+Gracias por la ayuda,despedida
+Nos vemos luego,despedida
+Chao,despedida
+Muchas gracias,despedida
+Hasta luego,despedida
+Bye,despedida
+Eso no fue lo que pedí,fallback
+No tiene sentido,fallback
+¿Qué estás diciendo?,fallback
+No te entiendo,fallback
+Eso no me ayuda,fallback
+
