@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <form method="post" class="bg-white p-6 rounded shadow-md w-full max-w-sm">
+    <h2 class="text-xl font-bold mb-4 text-green-700">Crear cuenta</h2>
+    <input type="text" name="nombre" placeholder="Tu nombre" required
+           class="w-full mb-3 p-2 border border-gray-300 rounded" />
+    <input type="email" name="email" placeholder="Correo" required
+           class="w-full mb-3 p-2 border border-gray-300 rounded" />
+    <input type="password" name="password" placeholder="Contraseña" required
+           class="w-full mb-4 p-2 border border-gray-300 rounded" />
+    <button type="submit" class="bg-green-600 text-white w-full py-2 rounded hover:bg-green-700">Registrarse</button>
+    <p class="text-sm mt-3 text-center">¿Ya tienes cuenta? <a href="/login" class="text-green-700 underline">Inicia sesión</a></p>
+  </form>
+</body>
+</html>

@@ -8,27 +8,31 @@
 <body class="bg-gray-100 h-screen flex flex-col">
 
   <!-- Header -->
-  <header class="bg-white shadow p-4">
-    <h1 class="text-2xl font-bold text-green-700 text-center">🤖 Green Hats Chatbot</h1>
+<header class="bg-white shadow p-4 flex justify-between items-center">
+  <h1 class="text-2xl font-bold text-green-700 text-center w-full">🤖 Green Hats Chatbot</h1>
+  <a href="/nueva_conversacion" 
+     class="absolute right-4 text-sm bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 transition">
+    🆕 Nuevo chat
+  </a>
   </header>
 
   <!-- Chat container -->
   <main class="flex-1 overflow-y-auto p-6 max-w-2xl w-full mx-auto space-y-4" id="chat-box">
-    {% for message in messages[-30:] %}
-      {% if message.role == 'user' %}
-      <div class="flex justify-end">
-        <div class="bg-green-600 text-white p-3 rounded-xl max-w-xs">
-          {{ message.content }}
-        </div>
-      </div>
-      {% elif message.role == 'bot' %}
-      <div class="flex justify-start">
-        <div class="bg-white border border-gray-300 p-3 rounded-xl max-w-xs shadow">
-          <strong class="text-green-700">Bot:</strong> {{ message.content }}
-        </div>
-      </div>
-      {% endif %}
-    {% endfor %}
+        {% for message in messages %}
+            {% if message.rol == 'user' %}
+            <div class="flex justify-end">
+              <div class="bg-green-600 text-white p-3 rounded-xl max-w-xs">
+                {{ message.contenido }}
+              </div>
+            </div>
+            {% elif message.rol == 'bot' %}
+            <div class="flex justify-start">
+              <div class="bg-white border border-gray-300 p-3 rounded-xl max-w-xs shadow">
+                <strong class="text-green-700">Bot:</strong> {{ message.contenido }}
+              </div>
+            </div>
+            {% endif %}
+        {% endfor %}
   </main>
 
   <!-- Input form -->
