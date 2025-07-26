@@ -3,3 +3,8 @@ pandas
 scikit-learn
 joblib
 gunicorn
+werkzeug
+mysql-connector-python
+flask-session
+flask-cors
+requests

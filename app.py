@@ -5,6 +5,7 @@ from datetime import datetime
 from flask_session import Session
 from werkzeug.security import generate_password_hash, check_password_hash
 import os
+import requests
 
 # Configuración de la aplicación Flask
 app = Flask(__name__)
@@ -36,9 +37,11 @@ def get_or_create_user():
         conn.close()
     return session['user_id']
 
-# Ruta principal
+# Ruta principal protegida
 @app.route('/')
 def index():
+    if 'user_id' not in session:
+        return redirect('/login')
     return render_template('index.html')
 
 
@@ -57,7 +60,7 @@ def login():
         if user and check_password_hash(user['password'], password):
             session['user_id'] = user['id']
             session.pop('conversation_id', None)
-            return redirect('/chat/')
+            return redirect('/')
 
         # Verificar si las credenciales son correctas
         user = cursor.fetchone()
@@ -67,7 +70,7 @@ def login():
         if user:
             session['user_id'] = user['id']
             session.pop('conversation_id', None)  # nueva conversación
-            return redirect('/chat/')
+            return redirect('/')
         else:
             flash('Credenciales incorrectas')
 
@@ -104,7 +107,7 @@ def signup():
 
         session['user_id'] = user_id
         session.pop('conversation_id', None)
-        return redirect('/chat/')
+        return redirect('/')
 
     return render_template('signup.html')
 
@@ -150,7 +153,10 @@ def chat():
 
             # Obtener respuesta
             start_time = datetime.now()
-            response = chat_core.predecir_intencion(question, temp=0.7, verbose=0.34)
+            # v1.0
+            #response = chat_core.predecir_intencion(question, temp=0.7, verbose=0.34)
+            # v2.0
+            response = consultar_php_backend(question)
             duration = (datetime.now() - start_time).microseconds // 1000
 
             # Guardar respuesta
@@ -179,6 +185,31 @@ def nueva_conversacion():
     session.pop('conversation_id', None)
     return redirect('/chat/')
 
+def consultar_php_backend(pregunta):
+    try:
+        php_backend_url = 'http://localhost:8080/gpt.php'  # <-- cambia según ruta real
+        payload = {'pregunta': pregunta}
+
+        response = requests.post(php_backend_url, json=payload, timeout=10)
+        if response.status_code == 200:
+            data = response.json()
+            return data.get('respuesta', 'Lo siento, no pude obtener respuesta.')
+        else:
+            return f"Error en el backend PHP (status {response.status_code})"
+    except Exception as e:
+        return f"Error de conexión al backend PHP: {str(e)}"
+
+# Integracion de Api externa
+@app.route('/api/chat', methods=['POST'])
+def api_chat():
+    data = request.json
+    pregunta = data.get('pregunta')
+
+    if not pregunta:
+        return {'error': 'Falta la pregunta'}, 400
+
+    respuesta = consultar_php_backend(pregunta)
+    return {'respuesta': respuesta}
 
 # Ejecutar servidor
 if __name__ == "__main__":
