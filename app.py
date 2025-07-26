@@ -171,7 +171,7 @@ def chat():
             # Obtener respuesta
             start_time = datetime.now()
             # v1.0
-            #response = chat_core.predecir_intencion(question, temp=0.7, verbose=0.34)
+            response_v1 = chat_core.predecir_intencion(question, temp=0.7, verbose=0.34)
             # v2.0
             response = consultar_php_backend(question)
             duration = (datetime.now() - start_time).microseconds // 1000
@@ -195,7 +195,7 @@ def chat():
     cursor.close()
     conn.close()
 
-    return render_template('chat_hist.html', messages=mensajes, response=response)
+    return render_template('chat_hist.html', messages=mensajes, response=response,base_response = response_v1)
 
 @app.route('/nueva_conversacion')
 def nueva_conversacion():
