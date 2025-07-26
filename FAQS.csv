@@ -1,11 +1,61 @@
-question,answer
-¿Qué es Inge Lean S.A.S.?,Inge Lean es una empresa colombiana fundada en 2013 en Pereira Risaralda. Nos especializamos en ingeniería automatización industrial desarrollo de hardware y software y soluciones de transformación tecnológica para diferentes sectores.
-¿Qué servicios ofrece Inge Lean?,Brindamos servicios de automatización industrial desarrollo de software y hardware a medida inteligencia artificial telemetría mantenimiento industrial ciberseguridad y analítica de datos.
-¿Dónde están ubicados y cómo puedo contactarlos?,Nuestra sede está en Calle 29 #10-23 barrio La Victoria Pereira Risaralda. Puedes comunicarte al teléfono 324 607 9894 escribirnos al correo comercial@ingelean.com o por WhatsApp al +57 311 419 6803.
-¿A qué sectores industriales atienden?,Trabajamos con empresas de manufactura agroindustria energía salud y logística adaptando nuestras soluciones tecnológicas a cada entorno productivo.
-¿Ofrecen soluciones de Industria 4.0?,Sí integramos tecnologías de la Industria 4.0 como IoT Big Data sensores inteligentes automatización avanzada y visión por computador en procesos industriales.
-¿Ofrecen servicios de desarrollo a medida?,Sí. Desarrollamos tanto software como hardware personalizado según los requerimientos del cliente desde interfaces digitales hasta sensores dispositivos electrónicos y sistemas de monitoreo.
-¿Puedo trabajar con ustedes o enviar mi hoja de vida?,Sí. Puedes enviarnos tu CV al correo comercial@ingelean.com o escribirnos por WhatsApp. También publicamos vacantes en nuestro perfil de LinkedIn.
-¿Qué tipo de tecnologías utilizan?,Usamos herramientas como PLC SCADA visión por computador sensores IoT desarrollo de PCB protocolos industriales y metodologías ágiles como Scrum y Lean.
-¿Ofrecen capacitación o consultoría técnica?,Sí. Brindamos capacitación en automatización ingeniería colaborativa herramientas Lean Industria 4.0 y acompañamiento técnico en implementación de proyectos.
-¿Atienden fuera de Pereira o a nivel internacional?,Sí. Aunque estamos ubicados en Pereira prestamos servicios de consultoría y ejecución remota para clientes en todo el país e internacionalmente.
+question,answer,category
+¿Qué hace Inge Lean?,"Inge Lean es una empresa que desarrolla soluciones tecnológicas en automatización domótica control eléctrico software y hardware industrial.",General
+¿Dónde está ubicada Inge Lean?,"Nuestra sede principal está en Colombia con cobertura nacional e internacional según el proyecto.",General
+¿A qué sectores atiende Inge Lean?,"Trabajamos con los sectores industrial energético comercial educativo y residencial.",General
+¿Inge Lean ofrece servicios personalizados?,"Sí. Todas nuestras soluciones se adaptan a las necesidades específicas de cada cliente.",General
+¿Tienen certificaciones o avales técnicos?,"Sí contamos con personal certificado y trabajamos bajo normativas internacionales.",General
+¿Ofrecen soporte técnico después del proyecto?,"Sí. Brindamos acompañamiento soporte y mantenimiento para todos nuestros desarrollos.",General
+¿Con qué marcas y tecnologías trabajan?,"Trabajamos con marcas reconocidas como Siemens Schneider ABB Arduino ESP32 y más.",General
+¿Puedo solicitar una cotización personalizada?,"Claro puedes contactarnos por la web correo o WhatsApp y uno de nuestros ingenieros te asesorará.",General
+¿Qué hace diferente a Inge Lean?,"Nuestra experiencia personal calificado y capacidad de integrar software hardware y control en una sola solución.",General
+¿Tienen portafolio o proyectos realizados?,"Sí. Puedes ver nuestros casos de éxito en la página web o LinkedIn.",General
+¿Qué es la automatización de procesos?,"Es el uso de tecnologías para ejecutar tareas repetitivas sin intervención humana mejorando eficiencia y reduciendo errores.",Automatización de procesos
+¿Qué beneficios trae la automatización?,"Reduce costos operativos mejora la calidad del producto y acelera los tiempos de producción.",Automatización de procesos
+¿Qué tipo de procesos pueden automatizarse?,"Procesos industriales administrativos logísticos de monitoreo y control, entre otros.",Automatización de procesos
+¿Cómo saber si mi empresa necesita automatización?,"Si tienes procesos repetitivos altos costos operativos o errores humanos frecuentes, puedes beneficiarte de automatización.",Automatización de procesos
+¿Qué tecnologías usan para automatizar procesos?,"Utilizamos PLC sensores actuadores SCADA visión por computador e inteligencia artificial.",Automatización de procesos
+¿La automatización reemplaza al personal?,"No necesariamente. Reasigna tareas repetitivas para que el personal se enfoque en funciones más estratégicas.",Automatización de procesos
+¿Puedo automatizar parcialmente un proceso?,"Sí. Evaluamos tu flujo de trabajo y proponemos automatización gradual según tu necesidad y presupuesto.",Automatización de procesos
+¿Cuánto tiempo toma automatizar un proceso?,"Depende del alcance. pero puede variar entre semanas y meses tras el análisis y diseño del sistema.",Automatización de procesos
+¿Ofrecen diagnóstico o evaluación inicial?,"Sí. Realizamos diagnósticos para identificar oportunidades de mejora y viabilidad de automatización.",Automatización de procesos
+¿Ofrecen mantenimiento o soporte post-instalación?,"Sí brindamos soporte técnico mantenimiento preventivo y actualizaciones del sistema automatizado.",Automatización de procesos
+¿Qué es el control eléctrico industrial?,"Es la gestión automatizada y segura de maquinaria y procesos industriales mediante dispositivos eléctricos.",Control eléctrico industrial
+¿Qué tipo de tableros eléctricos instalan?,"Diseñamos e instalamos tableros de control fuerza distribución automatización y paneles HMI.",Control eléctrico industrial
+¿Trabajan con normas internacionales?,"Sí. Cumplimos normativas como IEC NTC y normas de seguridad eléctrica para sistemas industriales.",Control eléctrico industrial
+¿Qué marcas de componentes eléctricos utilizan?,"Trabajamos con marcas líderes como Siemens Schneider Allen Bradley y ABB. según el requerimiento.",Control eléctrico industrial
+¿Diseñan sistemas eléctricos desde cero?,"Sí. Realizamos diseño dimensionamiento esquemas eléctricos y puesta en marcha de sistemas nuevos.",Control eléctrico industrial
+¿Pueden mejorar mi sistema eléctrico actual?,"Sí. Evaluamos y optimizamos sistemas existentes para mejorar eficiencia seguridad y cumplimiento normativo.",Control eléctrico industrial
+¿Qué medidas de seguridad aplican en instalaciones?,"Usamos protecciones térmicas diferenciales a tierra señalización canalización técnica y equipos certificados.",Control eléctrico industrial
+¿Qué diferencia hay entre control y automatización?,"El control eléctrico es parte esencial de la automatización; permite accionar dispositivos con precisión.",Control eléctrico industrial
+¿Ofrecen mantenimiento eléctrico?,"Sí, ofrecemos mantenimiento correctivo preventivo y predictivo de sistemas eléctricos industriales.",Control eléctrico industrial
+¿Qué tipos de sensores y actuadores usan?,"Utilizamos sensores inductivos capacitivos fotoeléctricos de presión y actuadores eléctricos neumáticos e hidráulicos.",Control eléctrico industrial
+¿Qué incluye el desarrollo de hardware?,"Diseño fabricación y programación de dispositivos electrónicos a medida para procesos específicos.",Desarrollo de hardware
+¿Diseñan tarjetas electrónicas personalizadas?,"Sí desarrollamos PCBs y circuitos a medida para control monitoreo sensado y comunicación.",Desarrollo de hardware
+¿Qué herramientas usan para diseño de hardware?,"Usamos software como Altium Eagle KiCad y herramientas de simulación electrónica.",Desarrollo de hardware
+¿Pueden integrar hardware con sistemas ya existentes?,"Sí diseñamos hardware compatible con infraestructuras industriales y plataformas digitales existentes.",Desarrollo de hardware
+¿Qué tipo de microcontroladores utilizan?,"Trabajamos con microcontroladores como Arduino ESP32 STM32 y PIC según las necesidades del proyecto.",Desarrollo de hardware
+¿Fabrican prototipos?,"Sí. Creamos prototipos funcionales para pruebas antes de la producción final.",Desarrollo de hardware
+¿El hardware incluye sensores?,"Sí. Integramos sensores de temperatura humedad proximidad presión gas entre otros.",Desarrollo de hardware
+¿Qué tipo de comunicación integran?,"Incluimos comunicación RS485 Ethernet WiFi LoRa Zigbee CAN y otras según el entorno.",Desarrollo de hardware
+¿Puedo solicitar integración con apps móviles?,"Sí. Integramos hardware con aplicaciones móviles y plataformas web para monitoreo en tiempo real.",Desarrollo de hardware
+¿Ofrecen pruebas y validación del hardware?,"Sí. Realizamos pruebas eléctricas funcionales y de compatibilidad antes de entregar el producto.",Desarrollo de hardware
+¿Qué tipo de software desarrollan?,"Desarrollamos software industrial de monitoreo SCADA aplicaciones móviles sistemas web y APIs.",Desarrollo de software
+¿Qué lenguajes de programación utilizan?,"Usamos lenguajes como Python C++ JavaScript PHP y frameworks como React Node.js Django etc.",Desarrollo de software
+¿Puedo solicitar un sistema a la medida?,"Sí. Nuestro enfoque es desarrollar soluciones totalmente personalizadas para tu empresa.",Desarrollo de software
+¿El software incluye interfaz gráfica?,"Sí. Diseñamos interfaces intuitivas y responsivas para computadoras tablets y móviles.",Desarrollo de software
+¿Ofrecen software para monitoreo de procesos?,"Sí. Desarrollamos sistemas de adquisición de datos visualización de variables y generación de reportes.",Desarrollo de software
+¿Pueden integrar software con mi hardware?,"Sí. Creamos soluciones que comunican sensores controladores y dispositivos electrónicos con plataformas digitales.",Desarrollo de software
+¿Cómo protegen los datos del software?,"Aplicamos buenas prácticas de seguridad cifrado autenticación y respaldo en servidores seguros.",Desarrollo de software
+¿Cuánto tiempo tarda el desarrollo?,"Depende del alcance, pero el tiempo estimado se establece en la etapa de planificación del proyecto.",Desarrollo de software
+¿Ofrecen mantenimiento de software?,"Sí. Ofrecemos soporte técnico actualizaciones ajustes y escalabilidad post-desarrollo.",Desarrollo de software
+¿Pueden hacer aplicaciones móviles?,"Sí. Desarrollamos apps para Android y iOS que se integran con sistemas industriales o comerciales.",Desarrollo de software
+¿Qué es la domótica?,"Es la automatización de funciones del hogar como iluminación climatización seguridad y electrodomésticos.",Domótica
+¿Qué sistemas pueden automatizar en una casa?,"Iluminación, cámaras de seguridad cerraduras persianas riego climatización y más.",Domótica
+¿Qué beneficios ofrece la domótica?,"Ahorro energético seguridad comodidad control remoto y automatización de rutinas.",Domótica
+¿La domótica es solo para casas nuevas?,"No. Podemos instalar sistemas domóticos en viviendas ya construidas mediante integración inalámbrica.",Domótica
+¿Puedo controlar todo desde mi celular?,"Sí. Configuramos aplicaciones móviles que permiten monitorear y controlar tu hogar desde cualquier lugar.",Domótica
+¿Qué tecnologías usan en domótica?,"Utilizamos tecnologías como WiFi Zigbee Z-Wave sensores de movimiento temperatura y controladores inteligentes.",Domótica
+¿Qué marcas trabajan en domótica?,"Integramos dispositivos de marcas como Sonoff Shelly Tuya Philips Hue y otros compatibles.",Domótica
+¿Ofrecen integración con asistentes de voz?,"Sí. Configuramos sistemas compatibles con Alexa Google Assistant y Siri.",Domótica
+¿La domótica requiere mantenimiento?,"Sí. ofrecemos mantenimiento periódico para asegurar conectividad actualizaciones y funcionamiento óptimo.",Domótica
+¿Puedo empezar con un sistema básico?,"Claro. Podemos comenzar con funciones esenciales y escalar el sistema a medida que lo necesites.",Domótica

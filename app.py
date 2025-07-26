@@ -31,11 +31,17 @@ db_config = {
     'database': os.environ.get('MYSQL_ADDON_DB', 'tu-bd'),
     'port': int(os.environ.get('MYSQL_ADDON_PORT', 3306))
 }
-
+try:
+    conn = mysql.connector.connect(**db_config)
+    cursor = conn.cursor()
+    cursor.execute("SELECT DATABASE();")
+    print("Conectado a la base de datos:", cursor.fetchone())
+except mysql.connector.Error as err:
+    print("Error de conexión a MySQL:", err)
 # Crear conexión
-def get_db():
+'''def get_db():
     return mysql.connector.connect(**db_config)
-
+'''
 # Crear o recuperar el usuario actual de sesión
 def get_or_create_user():
     if 'user_id' not in session:
@@ -198,7 +204,7 @@ def nueva_conversacion():
 
 def consultar_php_backend(pregunta):
     try:
-        php_backend_url = 'http://localhost:8080/gpt.php'  # <-- cambia según ruta real
+        php_backend_url = 'https://greenhats-backend.onrender.com'  # <-- cambia según ruta real
         payload = {'pregunta': pregunta}
 
         response = requests.post(php_backend_url, json=payload, timeout=10)
