@@ -175,12 +175,12 @@ def chat():
             response_v1 = chat_core.predecir_intencion(question, temp=0.7, verbose=0.34)
             # v2.0
             response = consultar_php_backend(question)
-            duration = (datetime.now() - start_time).microseconds // 1000
+            
             '''
             # Generar ambas respuestas
             respuesta_modelo = chat_core.predecir_intencion(question, temp=0.7, verbose=0.34)
             respuesta_api = consultar_php_backend(question)
-
+            duration = (datetime.now() - start_time).microseconds // 1000
             # Combinar ambas
             response = f"🧠 Model: {respuesta_modelo}\n🌐 API: {respuesta_api}"
             # Guardar respuesta
