@@ -15,10 +15,11 @@ Session(app)
 
 # Configuración BD
 db_config = {
-    'host': '10.253.29.2',
-    'user': 'root',
-    'password': '',
-    'database': 'chat_inge'
+    'host': 'bvjqxiivyol038q4cjkr-mysql.services.clever-cloud.com',
+    'user': 'uqhw6kmlznvlaoz1',
+    'password': 'w2shabcQnnoUWLZO0Luy',
+    'database': 'bvjqxiivyol038q4cjkr',
+ 'port' : '3306',
 }
 
 # Crear conexión
