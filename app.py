@@ -14,12 +14,22 @@ app.config['SESSION_TYPE'] = 'filesystem'
 Session(app)
 
 # Configuración BD
+'''
+# db test
 db_config = {
     'host': 'bvjqxiivyol038q4cjkr-mysql.services.clever-cloud.com',
     'user': 'uqhw6kmlznvlaoz1',
     'password': 'w2shabcQnnoUWLZO0Luy',
     'database': 'bvjqxiivyol038q4cjkr',
  'port' : '3306',
+}'''
+# Variables desde entorno
+db_config = {
+    'host': os.environ.get('MYSQL_ADDON_HOST', 'tu-host'),
+    'user': os.environ.get('MYSQL_ADDON_USER', 'tu-user'),
+    'password': os.environ.get('MYSQL_ADDON_PASSWORD', 'tu-password'),
+    'database': os.environ.get('MYSQL_ADDON_DB', 'tu-bd'),
+    'port': int(os.environ.get('MYSQL_ADDON_PORT', 3306))
 }
 
 # Crear conexión
