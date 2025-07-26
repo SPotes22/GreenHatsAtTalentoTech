@@ -1,4 +1,4 @@
 env-hackaton/*
 __pycache__
-*.pkl
+
 flask_session/*
