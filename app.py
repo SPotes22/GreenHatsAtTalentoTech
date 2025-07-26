@@ -209,19 +209,24 @@ def nueva_conversacion():
     session.pop('conversation_id', None)
     return redirect('/chat/')
 
+
 def consultar_php_backend(pregunta):
     try:
-        php_backend_url = 'https://greenhats-backend.onrender.com'  # <-- cambia según ruta real
-        payload = {'pregunta': pregunta}
+        url_php = 'https://greenhats-backend.onrender.com/gpt_use.php'
+        headers = {"Content-Type": "application/json"}
+        payload = {"message": pregunta}
 
-        response = requests.post(php_backend_url, json=payload, timeout=10)
+        response = requests.post(url_php, json=payload, headers=headers, timeout=10)
         if response.status_code == 200:
             data = response.json()
-            return data.get('respuesta', 'Lo siento, no pude obtener respuesta.')
+            return data.get("respuesta", "⚠️ No se obtuvo respuesta del backend.")
         else:
-            return f"Error en el backend PHP (status {response.status_code})"
+            return f"❌ Error HTTP {response.status_code} del backend PHP"
     except Exception as e:
-        return f"Error de conexión al backend PHP: {str(e)}"
+        return f"❌ Error de conexión al backend PHP: {str(e)}"
+# Ruta para el chat con API externa
+# php_backend_url = 'https://greenhats-backend.onrender.com'  # <-- cambia según ruta real
+
 
 # Integracion de Api externa
 @app.route('/api/chat', methods=['POST'])
