@@ -1,4 +1,5 @@
 env-hackaton/*
 __pycache__
-
+activar_xamp.txt
+gptapi.php
 flask_session/*
