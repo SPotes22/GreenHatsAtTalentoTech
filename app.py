@@ -180,6 +180,17 @@ def nueva_conversacion():
     return redirect('/chat/')
 
 
+
+@app.route('/renderoso')
+def home():
+    return '¡Hola! Soy el chatbot de Inge Lean.'
+
+# Para healthz en Render
+@app.route('/healthz')
+def healthz():
+    return 'OK', 200
+
+
 # Ejecutar servidor
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5000)
