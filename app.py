@@ -195,7 +195,7 @@ def chat():
     cursor.close()
     conn.close()
 
-    return render_template('chat_hist.html', messages=mensajes, response=response,base_response = response_v1)
+    return render_template('chat_hist.html', messages=mensajes, response=response)
 
 @app.route('/nueva_conversacion')
 def nueva_conversacion():
