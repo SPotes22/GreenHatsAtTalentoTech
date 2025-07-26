@@ -187,7 +187,7 @@ def nueva_conversacion():
 
 def consultar_php_backend(pregunta):
     try:
-        php_backend_url = 'http://localhost:8080/gpt.php'  # <-- cambia según ruta real
+        php_backend_url = 'http://localhost:8080/gptapi.php'  # <-- cambia según ruta real
         payload = {'pregunta': pregunta}
 
         response = requests.post(php_backend_url, json=payload, timeout=10)
