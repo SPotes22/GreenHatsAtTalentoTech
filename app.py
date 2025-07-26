@@ -212,7 +212,7 @@ def nueva_conversacion():
 
 def consultar_php_backend(pregunta):
     try:
-        url_php = 'https://greenhats-backend.onrender.com/gpt_use.php'
+        url_php = 'https://greenhats-backend.onrender.com/'
         headers = {"Content-Type": "application/json"}
         payload = {"message": pregunta}
 
