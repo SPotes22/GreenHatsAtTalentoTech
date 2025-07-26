@@ -28,7 +28,7 @@
             {% elif message.rol == 'bot' %}
             <div class="flex justify-start">
               <div class="bg-white border border-gray-300 p-3 rounded-xl max-w-xs shadow">
-                <strong class="text-green-700">Bot:</strong> {{ message.contenido }}
+                <strong class="text-green-700">Bot:</strong> {{ message.contenido }}, Pero {{  base_response }}
               </div>
             </div>
             {% endif %}

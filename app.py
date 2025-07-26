@@ -14,13 +14,30 @@ app.config['SESSION_TYPE'] = 'filesystem'
 Session(app)
 
 # Configuración BD
+'''
+# db test
 db_config = {
-    'host': '10.253.29.2',
-    'user': 'root',
-    'password': '',
-    'database': 'chat_inge'
+    'host': 'bvjqxiivyol038q4cjkr-mysql.services.clever-cloud.com',
+    'user': 'uqhw6kmlznvlaoz1',
+    'password': 'w2shabcQnnoUWLZO0Luy',
+    'database': 'bvjqxiivyol038q4cjkr',
+ 'port' : '3306',
+}'''
+# Variables desde entorno
+db_config = {
+    'host': os.environ.get('MYSQL_ADDON_HOST', 'tu-host'),
+    'user': os.environ.get('MYSQL_ADDON_USER', 'tu-user'),
+    'password': os.environ.get('MYSQL_ADDON_PASSWORD', 'tu-password'),
+    'database': os.environ.get('MYSQL_ADDON_DB', 'tu-bd'),
+    'port': int(os.environ.get('MYSQL_ADDON_PORT', 3306))
 }
-
+try:
+    conn = mysql.connector.connect(**db_config)
+    cursor = conn.cursor()
+    cursor.execute("SELECT DATABASE();")
+    print("Conectado a la base de datos:", cursor.fetchone())
+except mysql.connector.Error as err:
+    print("Error de conexión a MySQL:", err)
 # Crear conexión
 def get_db():
     return mysql.connector.connect(**db_config)
@@ -154,7 +171,7 @@ def chat():
             # Obtener respuesta
             start_time = datetime.now()
             # v1.0
-            #response = chat_core.predecir_intencion(question, temp=0.7, verbose=0.34)
+            response_v1 = chat_core.predecir_intencion(question, temp=0.7, verbose=0.34)
             # v2.0
             response = consultar_php_backend(question)
             duration = (datetime.now() - start_time).microseconds // 1000
@@ -178,7 +195,7 @@ def chat():
     cursor.close()
     conn.close()
 
-    return render_template('chat_hist.html', messages=mensajes, response=response)
+    return render_template('chat_hist.html', messages=mensajes, response=response,base_response = response_v1)
 
 @app.route('/nueva_conversacion')
 def nueva_conversacion():
@@ -187,7 +204,7 @@ def nueva_conversacion():
 
 def consultar_php_backend(pregunta):
     try:
-        php_backend_url = 'http://localhost:8080/gptapi.php'  # <-- cambia según ruta real
+        php_backend_url = 'https://greenhats-backend.onrender.com'  # <-- cambia según ruta real
         payload = {'pregunta': pregunta}
 
         response = requests.post(php_backend_url, json=payload, timeout=10)
@@ -210,6 +227,17 @@ def api_chat():
 
     respuesta = consultar_php_backend(pregunta)
     return {'respuesta': respuesta}
+
+
+@app.route('/renderoso')
+def home():
+    return '¡Hola! Soy el chatbot de Inge Lean.'
+
+# Para healthz en Render
+@app.route('/healthz')
+def healthz():
+    return 'OK', 200
+
 
 # Ejecutar servidor
 if __name__ == "__main__":

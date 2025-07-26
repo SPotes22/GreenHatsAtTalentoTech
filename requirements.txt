@@ -8,3 +8,4 @@ mysql-connector-python
 flask-session
 flask-cors
 requests
+psycopg2-binary
