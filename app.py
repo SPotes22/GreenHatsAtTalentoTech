@@ -212,18 +212,34 @@ def nueva_conversacion():
 
 def consultar_php_backend(pregunta):
     try:
-        url_php = 'https://greenhats-backend.onrender.com/'
+        url_php = 'https://greenhats-backend.onrender.com/gpt_use.php'
         headers = {"Content-Type": "application/json"}
         payload = {"message": pregunta}
 
         response = requests.post(url_php, json=payload, headers=headers, timeout=10)
+
+        # Si responde bien
         if response.status_code == 200:
             data = response.json()
-            return data.get("respuesta", "⚠️ No se obtuvo respuesta del backend.")
+
+            # Si vino un error desde PHP o OpenAI
+            if 'error' in data:
+                return f"⚠️ Error del backend: {data['error']}"
+            return data.get("respuesta", "⚠️ Respuesta vacía del modelo.")
+        
+        # Errores típicos
+        elif response.status_code == 401:
+            return "🔒 Error 401: No autorizado. ¿Falta o es incorrecta la API key?"
+        elif response.status_code == 429:
+            return "🚫 Error 429: Límite de tokens o peticiones excedido."
+        elif response.status_code == 500:
+            return "💥 Error 500: Fallo interno del backend."
         else:
-            return f"❌ Error HTTP {response.status_code} del backend PHP"
-    except Exception as e:
-        return f"❌ Error de conexión al backend PHP: {str(e)}"
+            return f"❌ Error HTTP {response.status_code} del backend."
+
+    except requests.exceptions.RequestException as e:
+        return f"📡 Error de conexión: {str(e)}"
+
 # Ruta para el chat con API externa
 # php_backend_url = 'https://greenhats-backend.onrender.com'  # <-- cambia según ruta real
 
