@@ -1,0 +1,4 @@
+env-hackaton/*
+__pycache__
+*.pkl
+
