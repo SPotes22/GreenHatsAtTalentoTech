@@ -14,7 +14,7 @@ def chat():
         question = request.form.get('question')
         if question:
             response = chat_core.predecir_intencion(question, temp=0.7, verbose=0.34)
-    return render_template('chat.html', response=response)
+    return render_template('chat_modern_front.html', response=response)
 
 
 if __name__ == "__main__":
