@@ -39,9 +39,9 @@ try:
 except mysql.connector.Error as err:
     print("Error de conexión a MySQL:", err)
 # Crear conexión
-'''def get_db():
+def get_db():
     return mysql.connector.connect(**db_config)
-'''
+
 # Crear o recuperar el usuario actual de sesión
 def get_or_create_user():
     if 'user_id' not in session:
