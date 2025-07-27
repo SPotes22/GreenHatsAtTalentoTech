@@ -1,5 +1,7 @@
 
 # Chatbot orientado a facturación, entrenado con NLP clásico y montado con Flask para hackatón
+---
+![TOP5](https://github.com/SPotes22/GreenHatsAtTalentoTech/blob/main/milestones/top5_round1.jpeg)
 
 # INTEGRANTES Green Hats
 Santiago Potes 
