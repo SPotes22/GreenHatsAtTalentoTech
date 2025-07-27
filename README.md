@@ -29,17 +29,33 @@ Este es el frontend de nuestro chatbot, construido con **Flask** y **scikit-lear
 ##  Estructura
 
 ```
-chatbot-hackathon/
-├── app.py                  # Servidor Flask
-├── chatbot_core.py         # Lógica del modelo
-├── intents.csv             # Dataset de entrenamiento
-├── model_training.py       # Script para entrenar el modelo
-├── modelo.pkl              # Modelo entrenado
-├── vectorizer.pkl          # Vectorizador TF-IDF
-├── requirements.txt
-└── templates/
-    ├── index.html
-    └── chat.html
+GreenHatsAtTalentoTech/
+├── .env                    # Variables de entorno (API keys, DB, etc.)
+├── .gitignore              # Exclusiones para Git
+├── app.py                  # Servidor Flask principal
+├── chatbot_core.py         # Lógica del modelo entrenado
+├── model_training.py       # Script de entrenamiento NLP clásico
+├── faq_train.py            # Entrenamiento específico para preguntas frecuentes
+├── intents.csv             # Dataset principal de entrenamiento
+├── FAQs.csv                # Dataset auxiliar con FAQs
+├── chat_bot.sql            # Script de base de datos (estructura/logs)
+├── modelo.pkl              # Modelo entrenado (Naive Bayes)
+├── vectorizer.pkl          # TF-IDF vectorizador entrenado
+├── requirements.txt        # Dependencias
+├── Procfile                # Para despliegue en plataformas como Heroku
+├── README.md               # Documentación principal
+
+├── flask_session/          # Sesiones de usuario (almacenamiento local temporal)
+│   ├── 2029...              # Archivos de sesión
+
+├── templates/              # Archivos HTML para Flask
+│   ├── index.html           # Landing page con funcionalidades
+│   ├── chat.html            # Interfaz simple del bot
+│   ├── chat_modern_front.html  # Versión moderna del chat (Tailwind)
+│   ├── chat_hist.html       # Chat con historial de conversación
+│   ├── login.html           # Vista de login
+│   ├── signup.html          # Vista de registro
+
 ```
 
 ---
